@@ -1,0 +1,581 @@
+@charset "utf-8";
+/* ---------------------------------------- Global ------------------------------------------ */
+*{ 
+padding: 0px;
+margin: 0px;
+}
+
+body {
+font-family: Arial, Helvetica, Verdana, Sans-serif;
+font-size: 100%;
+line-height: 150%;
+color: #666666;
+background: url("images/bg.png") no-repeat scroll center top #DDDDDD;
+
+}
+
+h1, h2, h3, h4 {
+    color: #666666;
+    margin: 0 0 10px;
+    text-shadow: 0 1px 0 #EEEEEE;
+}
+
+h1 {
+    font-size: 160%;
+    font-weight: normal;
+}
+
+h3, h4 {
+    font-size: 120%;
+}
+
+ul,li{
+list-style:none;
+}
+
+a {
+color: #666666;
+cursor: pointer;
+text-decoration:none;
+color:#20537A;
+}
+
+a:hover{
+text-decoration:underline;
+}
+
+/* td, p, li, div, select, input, h1, h2, h3, h4, h5, h6 {
+    line-height: 150%;
+} */
+
+
+/* ----------------------------------- layout ----------------------------------- */
+	
+#wrapper {
+width: 760px;
+margin: auto;
+}
+
+#header { 
+ }
+ 
+#content {
+
+}
+
+ #footer {
+clear: both;
+margin-top:10px;
+}
+
+
+
+/* ----------------------------------- header ----------------------------------- */	
+
+#header #menu{ 
+	width:  760px; 
+	height:  48px; 
+	background:  url(images/nav_bg.gif) repeat-x;
+	float:  left;
+	margin-top:  18px;
+}
+
+#header #menu ul.nav_content { 
+padding-left: 25px; 
+background: url(images/nav_l_bg.gif) no-repeat; float:left;
+}
+
+#header #menu ul.nav_content li {
+width:  88px;
+height:  48px;
+padding-left: 15px;
+padding-right: 13px;
+background: url(images/nav_li_right.gif) no-repeat right center;
+float: left; 
+line-height: 48px; 
+text-align: center; 
+font-size: 14px;
+font-weight: bold;
+}
+
+#header #menu ul.nav_content li a{
+color:#fff;
+width:88px;
+height:48px;
+display:block;
+}
+
+#header #menu ul.nav_content li a.current {
+line-height:37px;
+width: 88px; 
+height: 37px;
+background: url(images/nav_li_current.gif) no-repeat;
+display:block;
+color:#fff;
+}
+
+#header #menu ul.nav_content li a:hover{
+background:url(images/nav_li_hover.gif) no-repeat;
+line-height:37px;
+text-decoration:none;
+}
+
+/*new标签*/
+#header #menu ul.nav_content li em{
+background: url(images/bid_new.gif) no-repeat;
+width:  35px;
+height:  21px;
+display: inline-block;
+position:  absolute;
+top:  -20px;
+left:  40px;
+}
+
+/*menu右边的边角*/
+#header #menu .menu_nav_right{
+padding-right:20px;
+background:url(images/nav_r_bg.gif) no-repeat right top;
+float:right;
+margin-left:50px;
+padding-top:13px;
+height:23px;
+padding-bottom:12px;
+}
+
+#header #banner {
+height: 150px;
+background: #db6d16
+url(images/lib_logo.jpg);
+width: 760px;
+float:left;
+}
+
+/* ----------------------------------- searchContent ----------------------------------- */
+
+/*搜索框*/
+#content .searchbox {
+margin-top:10px;
+margin-left:120px;
+}
+
+/*搜索框标题*/
+#content .searchbox .title {
+    height: 29px;
+    padding-top: 4px;
+}
+
+#content .searchbox .title span.cur{
+    float: left;
+	width: 101px;
+	height: 33px;
+    margin-top:-4px;
+    line-height: 29px;
+	background: url("images/button_2_cur.png") no-repeat scroll left top transparent;
+    color: #0D477C;
+    font-weight: bold;
+	text-align:center;
+}
+
+
+/*搜索输入框*/
+#content .searchbox .text {
+    background: url("images/bg_search.gif") no-repeat scroll left top transparent;
+    height: 88px;
+    margin-top: -2px;
+    padding-top: 10px;
+    width: 513px;
+}
+
+#content .searchbox .text div.search {
+    display: block;;
+    height: 35px;
+    text-align: center;
+}
+#content .searchbox select {
+    width: 120px;
+}
+
+#content .searchbox input.input {
+    margin: 0 10px;
+    width: 250px;
+}
+
+
+#content .searchbox input.submit {
+    background: url("images/button_3.gif") no-repeat scroll left top transparent;
+    border: medium none;
+    height: 20px;
+    width: 74px;
+	cursor: pointer;
+}
+
+/*搜索框提示*/
+#content .searchbox .text ul {
+    margin-top: 10px;
+	margin-left:20px;
+}
+
+#content .searchbox .text ul .notice{
+	color:#fff;
+	font-size:12px;
+}
+
+#content .searchbox .text ul .notice font{
+	color:red;
+}
+
+/* ----------------------------------- resultContent ----------------------------------- */
+#resultContent{
+margin-top:25px;
+width:760px; 
+}
+
+/*每条图书信息*/
+.post {
+    font-size: 90%;
+    margin: 0 0 25px;
+    overflow: hidden;
+}
+
+/*图书的图片链接*/
+.post .strip {
+    background: url("images/bg_arrow.png") no-repeat scroll right top transparent;
+    float: left;
+    padding: 6px 20px 6px 6px;
+    text-align: center;
+}
+
+/*图书的信息包含评论*/
+.post .post_body {
+    float: left;
+    width: 83%;
+}
+
+/*图书的信息*/
+.post .content {
+    background: url("images/bg_comment.png") repeat-x scroll left bottom #FFFFFF;
+    border-color: #E3E3E3;
+    border-radius: 10px 10px 10px 10px;
+	-moz-border-radius:10px;
+    border-style: solid;
+    border-width: 0;
+    color: #888888;
+    overflow: hidden;
+    padding: 15px;
+}
+
+/*图书的标题*/
+.post .title {
+    margin: 0;
+	position:relative;
+}
+
+.post .title h1{
+	width:70%;
+	float:left;
+}
+
+.post .title .titleBack{
+	position:absolute;
+	top:-8px;
+	left:580px;
+}
+
+/*图书的其他信息*/
+.post .text p {
+    margin-bottom: 5px;
+}
+
+/*图书的评论列表框*/
+.post .comment_snippets {
+    background: url("images/bg_arrow_comment.png") no-repeat scroll 60px 0 transparent;
+    overflow: hidden;
+}
+
+/*图书的评论列表*/
+.post .comment_snippets ul {
+    background: none repeat scroll left bottom #F9F9F9;
+    border-radius: 10px 10px 10px 10px;
+	-moz-border-radius:10px;
+    list-style-type: none;
+    margin: 18px 0 0 40px;
+    padding: 10px 5px;
+}
+
+/*图书的每条评论框*/
+.post .comment_snippets li {
+    background: url("images/bg_comment.png") repeat-x scroll left bottom #FFFFFF;
+    font-size: 80%;
+    padding: 5px 5px 8px;
+}
+
+/*图书的评论作者*/
+.post .comment_snippets .author {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+/*图书的评论作者图片*/
+.post .comment_snippets .author img {
+    float: left;
+    margin-right: 5px;
+}
+
+/* ----------------------------------- bookDetail ----------------------------------- */
+
+.single .post .meta {
+    margin: 20px 0 0;
+}
+
+.post .meta {
+    margin: 5px 0 0 10px;
+}
+
+.post .meta, .post .postmetadata {
+    font-size: 75%;
+    margin: 0;
+}
+
+.post .meta .tags {
+    background: url("images/ico_tag.png") no-repeat scroll 0 6px transparent;
+    float: left;
+    min-height: 12px;
+    padding-left: 16px;
+}
+
+.post .meta p {
+    float: left;
+    margin: 0 20px 0 0;
+    padding: 0;
+}
+
+.commentlist{
+	padding-left:20px;
+}
+
+.commentlist li {
+    background: none repeat scroll 0 0 #F3F3F3;
+    border-radius: 10px 10px 10px 10px;
+	-moz-border-radius:10px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding: 6px;
+	list-style:decimal;
+}
+
+.commentlist li .avatar {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #EEEEEE;
+    float: right;
+    padding: 2px;
+}
+
+.commentlist cite, .commentlist cite a {
+    font-style: normal;
+    font-weight: bold;
+}
+
+
+.commentmetadata {
+    font-size: 80%;
+    font-weight: normal;
+}
+
+.commentlist p {
+    font-weight: normal;
+}
+
+#commentform input,#commentform select,#commentform textarea {
+    border: 1px solid #CCCCCC;
+    border-radius: 10px 10px 10px 10px;
+	-moz-border-radius:10px;
+    color: #666666;
+    font-family: Helvetica,Arial,sans-serif;
+    padding: 5px;
+}
+
+#commentform #submit {
+	color:#fff;
+}
+
+#commentform p{
+	margin-bottom:10px;
+}
+
+.bookdetails {
+	height: 28px;
+    line-height: 28px;
+    padding-left: 28px;
+	float:top;
+}
+
+.clear {
+    clear: both;
+    line-height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+.button, #searchsubmit {
+    background: none repeat scroll 0 0 #3399FF;
+    border: 0 none;
+    border-radius: 10px 10px 10px 10px;
+	-moz-border-radius:10px;
+    color: #FFFFFF;
+    font-size: 85%;
+    font-weight: bold;
+    padding: 4px 15px;
+    width: auto;
+}
+
+.new_button{
+    background: none repeat scroll 0 0 #ddd;
+    border: 0 none;
+    border-radius: 10px 10px 10px 10px;
+	-moz-border-radius:10px;
+    color: #FFFFFF;
+    font-size: 85%;
+    font-weight: bold;
+    padding: 4px 15px;
+    width: auto;
+}
+
+.widget input {
+    display: block;
+    margin-bottom: 5px;
+	 font-size: 85%;
+}
+
+.list li {
+    float: left;
+    height: 28px;
+    line-height: 28px;
+    padding-top: 1px;
+    width: 49.9%;
+}
+
+/* ----------------------------------- pagination ----------------------------------- */
+
+.pagin {
+padding: 2px 0 22px 250px;
+margin: 0;
+font-family: "Verdana", sans-serif;
+font-size: 7pt;
+font-weight: bold;
+}
+.pagin * {
+padding: 2px 6px;
+margin: 0;
+}
+.pagin a {
+border: solid 1px #666666;
+background-color: #EFEFEF;
+color: #666666;
+text-decoration: none;
+}
+.pagin a:visited {
+border: solid 1px #666666;
+background-color: #EFEFEF;
+color: #60606F;
+text-decoration: none;
+}
+.pagin a:hover, .pagin a:active {
+border: solid 1px #CC0000;
+background-color: white;
+color: #CC0000;
+text-decoration: none;
+}
+.pagin span {
+cursor: default;
+border: solid 1px #808080;
+background-color: #F0F0F0;
+color: #B0B0B0;
+}
+.pagin span.current {
+border: solid 1px #666666;
+background-color: #666666;
+color: white;
+}
+
+/* ----------------------------------- footer ----------------------------------- */
+#commentform{
+	width:500px;
+	padding:20px 115px;
+}
+
+.userSearch{
+    background: url("images/bg_comment.png") repeat-x scroll left bottom #FFFFFF;
+    border-color: #E3E3E3;
+    border-radius: 10px 10px 10px 10px;
+	-moz-border-radius:10px;
+    border-style: solid;
+    border-width: 0;
+    color: #888888;
+    overflow: hidden;
+    padding: 15px;
+	margin-bottom:25px;
+
+}
+
+.userSearch h3{
+	text-align:center;
+}
+
+.userSearch p{
+	margin-bottom:10px;
+}
+
+.userSearch p.label{
+   	width:35%;
+   	float:left;
+   	padding-right:5px;
+   	text-align:right;
+}
+   
+.userSearch p.input{
+   	width:63%;
+   	float:left;
+}
+   
+.userSearch p.submit{
+   	float:left;
+   	margin-left:200px;
+}   
+
+
+.userSearch p.input input{
+    border: 1px solid #CCCCCC;
+    border-radius: 10px 10px 10px 10px;
+	-moz-border-radius:10px;
+    color: #666666;
+    font-family: Helvetica,Arial,sans-serif;
+    padding: 5px;
+}
+
+.userList{
+	margin-top:20px;
+}
+
+/* ----------------------------------- footer ----------------------------------- */
+
+#footer{
+color: #c9c9c9;
+border-top: 1px solid #efefef;
+padding: 13px 25px;
+text-align:center;
+}
+
+/*
+
+#sidebar-a {
+float: right;
+width: 250px;
+line-height: 18px;
+}
+#sidebar-a .padding {
+padding: 25px;
+}
+
+*/
+
+
